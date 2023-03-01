@@ -6,7 +6,7 @@
   box-sizing: inherit;
 }
 :root{
-  --blue : #1320DC;
+  --blue : #1320dc;
   --text-gray : #77798C;
   --pink : #FB0A72;
 }
@@ -203,17 +203,26 @@ select{
   width: 30%;
   border: 1px solid lightgray;
   border-radius: 1rem;
-  height: 230px;
   position: relative;
-  overflow: hidden;
+}
+.hover {
+    margin-left: -441px;
+}
+.card:hover{
+  box-shadow: 1rem 1.5rem 2rem rgba(0, 0, 0, 0.3);
+  background-color: var(--blue);
+  transition: all ease-in-out .25s;
+  opacity: .6;
+  color: #fff;
 }
 .card img{
   width: 100%;
+  height: 230px;
 }
 .card h3{
   color: var(--blue);
-  top: 1rem;
-  left: 1.5rem;
+  top: 2rem;
+  left: 2.5rem;
   position: absolute;
 }
 .product{
