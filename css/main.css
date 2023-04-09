@@ -140,30 +140,34 @@ select{
   transition: .3s;
 }
 .big-section{
+  position: relative;
   width: 100%;
+  height: 100vh;
   background-image: url("../icones/Groupe-45.png");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   color: #fff;
   margin-bottom: 1rem;
 }
 .big-section-content{
-  width: 50%;
-  padding: 14em 0 14em 5em;
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 .big-section-content h1{
-  margin-top: 1.5rem;
   font-size: 4rem;
 }
 .big-section-content p{
-  margin: 3rem 0;
+  margin: 3.5rem 0;
   line-height: 2.5rem;
   font-size: 2rem
 }
 .big-btn{
   background-color: var(--pink);
   padding: 10px;
-  width: 30%;
+  width: 175px;
   text-align:center;
   font-size: 16px;
   border-radius: 5px;
@@ -186,11 +190,12 @@ select{
 .top-scroll{
   width: 55px;
   fill: var(--blue);
-  background-color: #f1f1f1;
+  background-color: #fff;
   position: fixed;
   right: 30px;
   bottom: 50px;
   border-radius: 8px;
+  box-shadow: 0px -1px 19px -4px rgba(56, 56, 56, 0.75);
   padding: .5rem 1.5rem;
 }
 .cards{
@@ -201,24 +206,28 @@ select{
 }
 .card{
   width: 30%;
-  border: 1px solid lightgray;
+  border: 1px solid #f1f1f1;
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
 }
 .hover {
-    margin-left: -441px;
+    position: absolute;
+    height: 189.65px;
+    width: 400.5px;
+    border-radius: 1rem;
 }
-.card:hover{
+.hover:hover{
   box-shadow: 1rem 1.5rem 2rem rgba(0, 0, 0, 0.3);
   background-color: var(--blue);
+  border: 1px solid var(--blue);
   transition: all ease-in-out .25s;
   opacity: .6;
   color: #fff;
 }
 .card img{
   width: 100%;
-  margin: -30px 0;
+  margin: -43px 0;
 }
 .card h3{
   color: var(--blue);
@@ -257,16 +266,15 @@ select{
 .range{
   display:flex;
   justify-content: space-around;
-  margin: 1rem 0;
 }
 .article-card{
   width: 23%;
   display: flex;
   flex-direction: column;
-  justify-content:center;
   background-color: #fff;
   padding: 1.8rem;
   border-radius: .5rem;
+  margin: 8px;
 }
 .article-card h2{
   font-size: 1.94rem;
@@ -288,9 +296,11 @@ select{
   display: flex;
   align-items: center;
   margin: 1rem 0 1rem 0;
+  /* width: 100%; */
 }
 .Shop{
-  padding: 8px 5rem;
+  width: 75%;
+  height: 45px;
   color: #fff;
   background-color: var(--blue);
   border-radius: 5px;
@@ -298,17 +308,24 @@ select{
   cursor: pointer;
   margin-right: 10px;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .Shop:hover{
   background: #fff;
   color: var(--blue);
 }
 .add{
-  padding: 8px 2rem;
+  display: flex;
+  width: 50px;
+  height: 45px;
   color: var(--blue);
   border: 2px solid var(--blue);
   border-radius: 5px;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
 .add:hover{
   background-color: var(--blue);
@@ -336,4 +353,70 @@ select{
   text-decoration: none;
   color: var(--blue);
   margin-left: 5px;
+}
+@media screen and (max-width: 760px){
+  .navbar-top{
+    width: 100%;
+    margin: 0;
+  }
+  .left-nav{
+    display: none;
+  }
+  select{
+    display: none;
+  }
+  .title{
+    width: 50%;
+    margin-left: 3rem;
+  }
+  .right-nav{
+    width: 50%;
+  }
+  .links{
+    display: none;
+  }
+  
+  .big-section{
+    background-position: center right;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../icones/Groupe-45.png");
+  }
+  .big-section-content{
+    width: 90vw;
+    left: 50%;
+  }
+    .big-section-content p{
+      font-size: 1.4rem;
+      margin-bottom: 0;
+    }
+    .big-section-content h1{
+      font-size: 2.5rem;
+    }
+  .top-scroll{
+    z-index: 999;
+  }
+  .filter{
+    display: none;
+  }
+  .product{
+    width: 100%;
+  }
+  .articles{
+    width: 100%;
+  }
+  .range{
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .article-card{
+    width: 45%;
+  }
+  .cards{
+    width: 100%;
+    flex-wrap:wrap;
+  }
+  .card{
+    width:100%;
+  }
 }
